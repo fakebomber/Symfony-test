@@ -1,0 +1,19 @@
+_welcome:
+  pattern: /
+  defaults: { _controller: FirstBundle:Admin:index }
+  
+admin_list:  
+  pattern: /admin/{page}
+  defaults: { _controller: FirstBundle:Admin:list, page: 1 }
+  requirements:
+    page: \d+
+        
+admin_task:  
+  pattern: /admin/{param}
+  defaults: { _controller: FirstBundle:Admin:task }
+  
+users_list:
+  pattern: /users/{var}.{_format}
+  defaults: { _controller: FirstBundle:Admin:users, var: 0, _format:html }
+  requirements:
+    _format: html|json
