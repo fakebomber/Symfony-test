@@ -2,6 +2,14 @@ _welcome:
   pattern: /
   defaults: { _controller: FirstBundle:Admin:index }
   
+add_product:
+  pattern: /add
+  defaults: { _controller: FirstBundle:Admin:add }
+  
+show_product:
+  pattern: /show/{id}
+  defaults: { _controller: FirstBundle:Admin:show, id:5 }
+  
 admin_list:  
   pattern: /admin/{page}
   defaults: { _controller: FirstBundle:Admin:list, page: 1 }

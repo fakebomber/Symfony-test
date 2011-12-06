@@ -1,0 +1,14 @@
+<?php
+  // src/Acme/FirstBundle/Entity/Product.php
+  
+  namespace FirstBundle\Entity;
+  
+  class Product
+  {
+    protected $name;
+    
+    protected $price;
+    
+    protected $description;
+    
+  }
